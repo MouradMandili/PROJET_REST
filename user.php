@@ -1,6 +1,6 @@
 <?php
 
-require_once 'DAO.php';
+require 'DAO.php';
 
     $nomError = $prenomError = $pwError = $emailError = $nom = $prenom = $pw = $email = "";
 
@@ -8,6 +8,7 @@ require_once 'DAO.php';
     $prenom = $_POST["prenom"];
     $email = $_POST["email"];
     $pw = $_POST["mdp"];
+
 
     $db = DAO::connect();
     $requete = "INSERT INTO Client (nom_client, prenom_client, email, mdp) VALUES (:nom_client, :prenom_client, :email, :mdp);";
