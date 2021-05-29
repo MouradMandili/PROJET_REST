@@ -26,6 +26,4 @@ class DAO{
     
 }
 
-DAO::connect();
-
 ?>

@@ -1,3 +1,20 @@
+<?php
+    require 'DAO.php';
+
+    $nom = $prenom = $pw = $email = "";
+
+    $email = $_POST["email"];
+    $pw = $_POST["mdp"];
+
+    $db = DAO::connect();
+    $requete = "SELECT * FROM Client WHERE email='$email' AND mdp='$pw'";
+    $maRequet = $db->prepare($requete);
+    $maRequet->execute();
+    $result = $maRequet->fetchAll();
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +26,8 @@
     <title>PROFIL</title>
 </head>
 <body>
-
+    <?php var_dump($result);
+           echo $result;  ?>
     <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10 ">
@@ -24,20 +42,35 @@
     <div class="container">
         <div class="row">
             <div class="col-10 ">
-             
+                <?php 
+                
+                ?>
                 <div class="col-md-4">
                     <h3>Nom:</h3>
-                    <p><?php echo $nomError?></p>
-                </div>
+                    <p><?php echo $nom?></p>
                 </div>
 
                 <div class="col-md-6 d-flex">
                     <h3>Prénom:</h3>
-                    <p>Mourad</p>
+                    <p><?php echo $prénom?></p>
                 </div>
-            
+
+                <div class="col-md-6 d-flex">
+                    <h3>email:</h3>
+                    <p><?php echo $email?></p>
+                </div>
+                
+                <div class="col-md-6 d-flex">
+                    <h3>mot de passe:</h3>
+                    <p><?php echo $pw?></p>
+                </div>
+
                 <div class="col-12 justify-content-center">
                     <button class="btn btn-primary" type="submit">Ajouter un Restaurant</button>
+                </div>
+                
+                <div class="col-12 justify-content-center">
+                    <button class="btn btn-primary" type="submit">Voir la liste des resrtaurants</button>
                 </div>
 
             </div>
