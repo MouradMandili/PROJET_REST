@@ -12,6 +12,10 @@ $maRequet = $db->prepare($requete);
 $maRequet->execute();
 $result = $maRequet->fetchAll();
 
+echo "<pre>";
+var_dump($result);
+echo "</pre>";
+
     if(empty($result))
     {
         echo "mdp email incorrect";

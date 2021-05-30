@@ -46,10 +46,8 @@ class Booking{
         return $total;
     }
 
-}
+    
 
-// $res = new Booking(121,'20/10/2021','8:0',5,'Mourad');
-// $count=$res->countBooking();
-// print_r($count);
+}
 
 ?>

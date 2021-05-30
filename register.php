@@ -9,7 +9,6 @@ require 'DAO.php';
     $email = $_POST["email"];
     $pw = $_POST["mdp"];
 
-
     $db = DAO::connect();
     $requete = "INSERT INTO Client (nom_client, prenom_client, email, mdp) VALUES (:nom_client, :prenom_client, :email, :mdp);";
     $maRequet = $db->prepare($requete);

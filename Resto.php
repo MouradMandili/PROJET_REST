@@ -36,7 +36,7 @@ class Resto{
 
     public function envoiDonnees(){
         require_once 'DAO.php';
-        echo "oui";
+    
         $db = DAO::connect();
         var_dump($db);
         $requete = "INSERT INTO Restos (resto_name, resto_address, resto_image, resto_type, resto_description) VALUES (:resto_name, :resto_address, :resto_image, :resto_type, :resto_description)";
@@ -51,9 +51,9 @@ class Resto{
 
     public function recupDonnees(){
         require_once 'DAO.php';
-        echo "oui";
+        
         $db = DAO::connect();
-        echo "oui oui";
+        
         $requete = "SELECT * FROM Restos";
 
         $maRequet = $db->prepare($requete);
@@ -69,9 +69,8 @@ class Resto{
 
     public function test(){
         require_once 'DAO.php';
-        echo "oui";
+        
         $db = DAO::connect();
-        echo "oui oui";
         
         $requete = "SELECT * FROM Restos";
 

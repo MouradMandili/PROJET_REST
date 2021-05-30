@@ -21,56 +21,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profil.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <title>PROFIL</title>
 </head>
 <body>
-    <?php var_dump($result);
-           echo $result;  ?>
-    <div class="container">
+
+    <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-10 ">
+                <div class="col-12 ">
                     <h1>MONREST@</h1>
-                </div>
-                <div class="col-10 ">
-                    <h2>MON COMPTE </h2>
                 </div>
             </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-top:150px;">
         <div class="row">
+
+            <div class="col-10" style="margin-bottom:50px;">
+                <h2>MON COMPTE </h2>
+            </div>
+
             <div class="col-10 ">
-                <?php 
                 
-                ?>
                 <div class="col-md-4">
-                    <h3>Nom:</h3>
-                    <p><?php echo $nom?></p>
+                    <h3>Nom :</h3><span><?php echo $nom?></span>
                 </div>
 
                 <div class="col-md-6 d-flex">
-                    <h3>Prénom:</h3>
-                    <p><?php echo $prénom?></p>
+                    <h3>Prénom :</h3><span><?php echo $prénom?></span>
                 </div>
 
                 <div class="col-md-6 d-flex">
-                    <h3>email:</h3>
-                    <p><?php echo $email?></p>
+                    <h3>Nombre de réservation :</h3><span><?php echo $email?></span>
                 </div>
                 
-                <div class="col-md-6 d-flex">
-                    <h3>mot de passe:</h3>
-                    <p><?php echo $pw?></p>
-                </div>
-
-                <div class="col-12 justify-content-center">
-                    <button class="btn btn-primary" type="submit">Ajouter un Restaurant</button>
-                </div>
-                
-                <div class="col-12 justify-content-center">
-                    <button class="btn btn-primary" type="submit">Voir la liste des resrtaurants</button>
+                            
+                <div class="col-12 justify-content-center mb-1" style="margin-top:30px;"> 
+                   <a href="listResto.php"><button class="btn btn-success" type="submit">la liste des resrtaurants</button></a> 
                 </div>
 
             </div>
