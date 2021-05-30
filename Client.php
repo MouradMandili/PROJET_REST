@@ -34,6 +34,10 @@ class Client{
         echo "je m'appele ".$this->getNom_client(); 
     }
 
+    //s'inscrire 
+
+    //se connecter à son compte
+
 }
 
 

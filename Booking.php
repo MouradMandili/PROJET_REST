@@ -6,12 +6,13 @@ class Booking{
     private $booking_hour;
     private $booking_count;
 
-    public function __construct($booking_number,$booking_date,$booking_hour,$booking_count,$client){
+    public function __construct($booking_number,$booking_date,$booking_hour,$booking_count,$client,$resto){
         $this->booking_number = $booking_number;
         $this->booking_date = $booking_date;
         $this->booking_hour = $booking_hour;
         $this->booking_count = $booking_count;
         $this->client = $client;
+        $this->resto = $resto;
     }
 
     public function getBooking_number(){
@@ -34,6 +35,7 @@ class Booking{
         echo "j'ai réserver merci";
     }
 
+    // retourne le nombre de reservation par client
     public function countBooking($client){
         require_once 'DAO.php';
 
@@ -45,6 +47,9 @@ class Booking{
 
         return $total;
     }
+
+    //reserver
+
 
     
 
