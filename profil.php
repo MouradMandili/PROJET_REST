@@ -1,20 +1,3 @@
-<?php
-    require 'DAO.php';
-
-    $nom = $prenom = $pw = $email = "";
-
-    $email = $_POST["email"];
-    $pw = $_POST["mdp"];
-
-    $db = DAO::connect();
-    $requete = "SELECT * FROM Client WHERE email='$email' AND mdp='$pw'";
-    $maRequet = $db->prepare($requete);
-    $maRequet->execute();
-    $result = $maRequet->fetchAll();
-
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
