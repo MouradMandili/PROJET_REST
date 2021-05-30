@@ -1,23 +1,19 @@
 <?php
 
-require 'DAO.php';
+require_once 'DAO.php';
+require_once 'Client.php';
 
     $nomError = $prenomError = $pwError = $emailError = $nom = $prenom = $pw = $email = "";
-
+    //recuper les elements du formulaires
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $email = $_POST["email"];
     $pw = $_POST["mdp"];
 
-    $db = DAO::connect();
-    $requete = "INSERT INTO Client (nom_client, prenom_client, email, mdp) VALUES (:nom_client, :prenom_client, :email, :mdp);";
-    $maRequet = $db->prepare($requete);
-    $maRequet->bindParam(':nom_client', $nom);
-    $maRequet->bindParam(':prenom_client', $prenom);
-    $maRequet->bindParam(':email', $email);
-    $maRequet->bindParam(':mdp', $pw);
-    $maRequet->execute();
-    header("Location: connect.php");
+    // se connecte
+    //creer un objet de la class Client recupere les poste et appel la méthode pour s'inscrire
+    client = new Cleint($nom, $prenom, $email, $wp);
+    client->registerClient();
 
     // if(!empty($_POST))
     // {

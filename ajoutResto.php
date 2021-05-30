@@ -28,7 +28,7 @@
 
             <div class="col-10 d-flex justify-content-center">
 
-                <form class="row g-3 d-flex flex-column" method="post" action="#">
+                <form class="row g-3 d-flex flex-column" method="post" action="Log.php">
 
                     <div class="col-md-12">
                         <label for="resto_nom" class="form-label">Nom :</label>

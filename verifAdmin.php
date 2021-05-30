@@ -22,7 +22,7 @@
         <div class="row">
 
             <div class="col-10 ">
-            <form class="row g-3 d-flex flex-column" method="post" action="verif.php">
+            <form class="row g-3 d-flex flex-column" method="post" action="verifAd.php">
              
                 <div class="col-md-6">
                     <label for="validationDefaultUsername" class="form-label">email</label>

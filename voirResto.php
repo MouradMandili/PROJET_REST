@@ -27,9 +27,16 @@
             </div>
 
             <div class="col-6">
+            <?= 
+                require_once 'DAO.php'
+                require_once 'Resto.php';
+                // avec cette méthode on recupere id via url 
+                $resto->voirResto();
                 
+            ?>
                 <div class="col-md-4">
-                    <h3>Description :</h3><span><?php echo $description?></span>
+                    <!-- pour savoir quel id il faut aller chercher la description  -->
+                    <h3>Description :</h3><span><?php echo $resto->resto_description?></span>
                 </div>
                             
                 <div class="col-12 justify-content-center mb-1" style="margin-top:30px;"> 

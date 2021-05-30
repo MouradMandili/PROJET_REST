@@ -34,35 +34,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Resto Bitch</td>
-                            <td>75 rue de la gare 59300 Valenciennes</td>
-                            <td>Italien</td>
-                            <td width=200>
-                                 <a class="btn btn-info" href="voirResto.php?id=1"><span class="glyphicon glyphicon-eye-open"></span>Voir</a>
-                                 <a class="btn btn-danger" href="reservResto.php?id=1"><span class="glyphicon glyphicon-eye-open"></span>Résever</a>
-                            </td>
-                        </tr>
+                        <!-- pour charque element recuperé du fetch affiché la valeur de ses attributs qui correspond  au colonne BDD-->
+                        <?= 
+                        require_once 'Resto.php'; 
+                        require_once 'DAO.php';
+                        ?>
+                        <?= foreach($restos as $resto): ?>
+                            
+                            <tr>
+                                <td><?= $resto->resto_name?></td>
+                                <td><?= $resto->resto_address?></td>
+                                <td><?= $resto->resto_type?></td>
+                                <td style="width=200;">
+                                        <!-- pour que $_GET['id'] puisse récupèrer l'id via url pour la requete de la méthode voirResto -->
+                                        <?= echo '<a class="btn btn-info" href="voirResto.php?id="'.$resto->id_resto'>Voir</a>'?>
+                                        <?= echo '<a class="btn btn-danger" href="reservResto.php?id="'.$resto->id_resto'>Résever</a>'?>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Resto Bitch</td>
-                            <td>75 rue de la gare 59300 Valenciennes</td>
-                            <td>Italien</td>
-                            <td width=200>
-                                 <a class="btn btn-info" href=""><span class="glyphicon glyphicon-eye-open"></span>Voir</a>
-                                 <a class="btn btn-danger" href=""><span class="glyphicon glyphicon-eye-open"></span>Résever</a>
-                            </td>
-                        </tr>
+                        <?= endforeach ?>    
 
-                        <tr>
-                            <td>Resto Bitch</td>
-                            <td>75 rue de la gare 59300 Valenciennes</td>
-                            <td>Italien</td>
-                            <td width=200>
-                                 <a class="btn btn-info" href=""><span class="glyphicon glyphicon-eye-open"></span>Voir</a>
-                                 <a class="btn btn-danger" href=""><span class="glyphicon glyphicon-eye-open"></span>Résever</a>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                 

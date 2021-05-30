@@ -48,7 +48,7 @@ class Booking{
         return $total;
     }
 
-    //reserver
+    //reserver un resto
 
 
     

@@ -73,14 +73,24 @@ class Resto{
     }
 
     //Afficher un restaurant precis
-    public function voirResto($arg){
-        //condition 
-        //connexion
-        // recuperer l'id dans l'url pour le _GET[]
-        //preparer la requette attente id?
-        //excute(id recuperer)
+    public function voirResto(){
+        require_once 'DAO.php';
+        
+        $db = DAO::connect();
+        
+        $requete = "SELECT * FROM Restos WHERE id_resto= :id";
 
-        //deconnexion
+        $maRequet = $db->prepare($requete);
+
+        $maRequet->execute(id => $_GET['id']);
+
+        $maRequet->setFetchMode(PDO::FETCH_CLASS, "Resto");
+
+        $resto = $maRequet->fetch();
+
+        return $resto;
+
+        DAO::disconnect();
     }
 
 }

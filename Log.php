@@ -2,7 +2,7 @@
 
 require_once "Resto.php";
 require_once "DAO.php";
-
+// recupere les post du fichier ajoutResto pour les envoyer dans la BDD
 if(isset($_POST['submit'])){
     
     $name = $_POST['name'];
