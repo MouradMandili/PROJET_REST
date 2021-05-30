@@ -39,6 +39,10 @@
                 <div class="col-12 justify-content-center">
                     <button class="btn btn-success" type="submit">se connecter</button>
                 </div>
+                
+                <div class="col-12 justify-content-center">
+                        <a class="btn btn-success" href="listResto.php">retour à la liste</a>
+                </div>
                 </form>
             </div>
         </div>

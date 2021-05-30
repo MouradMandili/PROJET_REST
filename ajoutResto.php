@@ -28,35 +28,39 @@
 
             <div class="col-10 d-flex justify-content-center">
 
-                <form class="row g-3 d-flex flex-column" method="post" action="register.php">
+                <form class="row g-3 d-flex flex-column" method="post" action="#">
 
                     <div class="col-md-12">
                         <label for="resto_nom" class="form-label">Nom :</label>
-                        <input type="text" class="form-control" name="resto_nom" value="" required>
+                        <input type="text" class="form-control" name="resto_nom" value="">
                     </div>
 
                     <div class="col-md-12">
                         <label for="resto_addresse" class="form-label">Addresse :</label>
-                        <input type="text" class="form-control" name="resto_addresse" value="" required>
+                        <input type="text" class="form-control" name="resto_addresse" value="">
                     </div>
 
                     <div class="col-md-12">
                         <label for="validationDefault02" class="form-label">Type :</label>
-                        <input type="text" class="form-control" name="resto_type" value="" required>
+                        <input type="text" class="form-control" name="resto_type" value="">
                     </div>
 
                     <div class="col-md-12">
                         <label for="resto_description" class="form-label">Description :</label>
-                        <input type="areatext" class="form-control" name="resto_description"  aria-describedby="inputGroupPrepend2" required>
+                        <input type="areatext" class="form-control" name="resto_description"  aria-describedby="inputGroupPrepend2">
                     </div>
 
                     <div class="col-md-12">
                         <label for="validationDefault03" class="form-label">Sélectionner une image :</label>
-                        <input type="text" class="form-control" name="resto_image">
+                        <input type="file" class="form-control" name="resto_image">
                     </div>
                 
                     <div class="col-12 justify-content-center">
                         <button class="btn btn-success" type="submit">Ajouter</button>
+                    </div>
+
+                    <div class="col-12 justify-content-center">
+                        <a class="btn btn-success" href="listResto.php">retour à la liste</a>
                     </div>
 
                 </form>
