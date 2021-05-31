@@ -28,12 +28,12 @@
                     <label for="validationDefaultUsername" class="form-label">email</label>
                     <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="text" class="form-control" name="email"  aria-describedby="inputGroupPrepend2" required>
+                    <input type="text" class="form-control" name="emailAd"  aria-describedby="inputGroupPrepend2" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="validationDefault03" class="form-label">mot de passe</label>
-                    <input type="text" class="form-control" name="mdp" required>
+                    <input type="text" class="form-control" name="mdpAd" required>
                 </div>
             
                 <div class="col-12 justify-content-center">

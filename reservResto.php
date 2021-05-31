@@ -22,14 +22,12 @@
 
     <div class="container-fluid d-flex justify-content-center" style="margin-top:200px">
         <div class="row d-flex justify-content-center">
+            
             <div class="col-10 d-flex justify-content-center">
-                <h2 style="color:green; margin-bottom:50px;">Veuillez vous inscrire pour profiter de nos offres <span>-50%</span> </h2>
-            </div>
-            <div class="col-10 d-flex justify-content-center">
-            <form class="row g-3 d-flex flex-column" method="post" action="register.php">
+            <form class="row g-3 d-flex flex-column" method="post" action="ajoutReservation.php">
                 <div class="col-md-12">
-                    <label for="nom_client" class="form-label">Date</label>
-                    <input type="date" class="form-control" name="nom_client" value="res_date">
+                    <label for="res_date" class="form-label">Date</label>
+                    <input type="date" class="form-control" name="res_date" value="">
                 </div>
                 
                 <div class="col-md-12">
@@ -37,11 +35,6 @@
                     <input type="time" class="form-control" name="res_heure">
                 </div>
 
-                <div class="col-md-12">
-                    <label for="validationDefault03" class="form-label">Nombre de Personnes</label>
-                    <input type="number" class="form-control" name="nbr_personne">
-                </div>
-            
                 <div class="col-12 justify-content-center">
                     <button class="btn btn-success" type="submit">Réserver</button>
                 </div>
